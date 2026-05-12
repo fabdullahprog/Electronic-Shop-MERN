@@ -1,0 +1,14 @@
+import { Router } from 'express';
+import { register, login, verifyEmail, forgotPassword, resetPassword, getMe, updateProfile, changePassword, resendVerification } from '../controllers/authController';
+import { protect } from '../middleware/authMiddleware';
+const router = Router();
+router.post('/register', register);
+router.post('/login', login);
+router.get('/verify-email/:token', verifyEmail);
+router.post('/forgot-password', forgotPassword);
+router.put('/reset-password/:token', resetPassword);
+router.post('/resend-verification', resendVerification);
+router.get('/me', protect, getMe);
+router.put('/update-profile', protect, updateProfile);
+router.put('/change-password', protect, changePassword);
+export default router;

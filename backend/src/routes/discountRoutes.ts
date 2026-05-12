@@ -1,0 +1,10 @@
+import { Router } from 'express';
+import { getDiscounts, createDiscount, updateDiscount, deleteDiscount, validateCoupon } from '../controllers/discountController';
+import { protect, admin } from '../middleware/authMiddleware';
+const router = Router();
+router.post('/validate', protect, validateCoupon);
+router.get('/', protect, admin, getDiscounts);
+router.post('/', protect, admin, createDiscount);
+router.put('/:id', protect, admin, updateDiscount);
+router.delete('/:id', protect, admin, deleteDiscount);
+export default router;

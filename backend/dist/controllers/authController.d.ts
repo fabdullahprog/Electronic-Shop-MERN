@@ -1,0 +1,11 @@
+import { Response } from 'express';
+import { AuthRequest } from '../types';
+export declare const register: (req: AuthRequest, res: Response) => Promise<void>;
+export declare const verifyEmail: (req: AuthRequest, res: Response) => Promise<void>;
+export declare const login: (req: AuthRequest, res: Response) => Promise<void>;
+export declare const forgotPassword: (req: AuthRequest, res: Response) => Promise<void>;
+export declare const resetPassword: (req: AuthRequest, res: Response) => Promise<void>;
+export declare const getMe: (req: AuthRequest, res: Response) => Promise<void>;
+export declare const updateProfile: (req: AuthRequest, res: Response) => Promise<void>;
+export declare const changePassword: (req: AuthRequest, res: Response) => Promise<void>;
+export declare const resendVerification: (req: AuthRequest, res: Response) => Promise<void>;

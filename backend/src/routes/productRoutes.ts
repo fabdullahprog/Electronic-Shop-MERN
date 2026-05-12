@@ -1,0 +1,13 @@
+import { Router } from 'express';
+import { getProducts, getProduct, createProduct, updateProduct, deleteProduct, getTrendingProducts, getRelatedProducts, getBrands } from '../controllers/productController';
+import { protect, admin } from '../middleware/authMiddleware';
+const router = Router();
+router.get('/', getProducts);
+router.get('/trending', getTrendingProducts);
+router.get('/brands', getBrands);
+router.get('/:id/related', getRelatedProducts);
+router.get('/:id', getProduct);
+router.post('/', protect, admin, createProduct);
+router.put('/:id', protect, admin, updateProduct);
+router.delete('/:id', protect, admin, deleteProduct);
+export default router;

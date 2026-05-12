@@ -1,0 +1,27 @@
+.footer { background: var(--dark); color: white; margin-top: auto; }
+.footer-main { padding: 60px 0 40px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 2fr; gap: 40px; }
+.footer-logo { font-family: var(--font-heading); font-size: 24px; font-weight: 800; color: white; text-decoration: none; display: block; margin-bottom: 16px; }
+.footer-brand p { color: #aaa; font-size: 14px; line-height: 1.8; margin-bottom: 20px; }
+.social-links { display: flex; gap: 12px; }
+.social-links a { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; transition: var(--transition); text-decoration: none; }
+.social-links a:hover { background: var(--primary); transform: translateY(-3px); }
+.footer-links h4 { font-size: 16px; font-weight: 600; margin-bottom: 20px; color: white; }
+.footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links ul li a { color: #aaa; text-decoration: none; font-size: 14px; transition: var(--transition); }
+.footer-links ul li a:hover { color: var(--primary); padding-left: 4px; }
+.footer-contact h4 { font-size: 16px; font-weight: 600; margin-bottom: 20px; }
+.contact-item { display: flex; align-items: flex-start; gap: 10px; color: #aaa; font-size: 14px; margin-bottom: 12px; }
+.contact-item svg { margin-top: 2px; flex-shrink: 0; color: var(--primary); }
+.payment-methods { margin-top: 20px; }
+.payment-methods h5 { font-size: 14px; margin-bottom: 10px; color: #ccc; }
+.payment-icons { display: flex; gap: 8px; flex-wrap: wrap; }
+.payment-badge { background: rgba(255,255,255,0.1); color: white; padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.2); }
+.footer-bottom { background: rgba(0,0,0,0.3); padding: 16px 0; }
+.footer-bottom .container { display: flex; align-items: center; justify-content: space-between; }
+.footer-bottom p { color: #888; font-size: 13px; }
+.footer-bottom-links { display: flex; gap: 20px; }
+.footer-bottom-links a { color: #888; font-size: 13px; text-decoration: none; transition: var(--transition); }
+.footer-bottom-links a:hover { color: var(--primary); }
+@media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 576px) { .footer-grid { grid-template-columns: 1fr; } .footer-bottom .container { flex-direction: column; gap: 10px; text-align: center; } }
