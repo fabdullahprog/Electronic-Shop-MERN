@@ -11,7 +11,6 @@ Electronic Shop is a full-stack MERN e-commerce application built with TypeScrip
 - Shopping cart, wishlist & order system
 - Product reviews & ratings
 - Admin dashboard with product, order, user & discount management
-- Coupon validation system
 - Cloudinary image upload support
 - Email notifications
 - Secure API with JWT, CORS & rate limiting
